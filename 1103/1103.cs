@@ -39,15 +39,27 @@ class URI{
 				In the case that h2 is bigger than h1,
 				check the difference between 24 and h1
 			*/
-			if(h2 >= h1){
+			if(h2 > h1){
 				diffHoras = h2 - h1;
 
 				minutosTotal = diffHoras*60 - m1 + m2;
 
 				Console.WriteLine(minutosTotal);
 			}
+			else if(h1 == h2){
+				if(m1 <= m2){
+					Console.WriteLine(m2 - m1);
+				}
+				else{
+					Console.WriteLine(24*60 - m1 + m2);
+				}
+			}
+			else{
+				diffHoras = 24 - h1 + h2;
+				minutosTotal = diffHoras*60 - m1 + m2;
 
-
+				Console.WriteLine(minutosTotal);
+			}
 		}
 	}
 }
