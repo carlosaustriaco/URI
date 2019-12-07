@@ -1,12 +1,19 @@
 const readline = require('readline');
 
-const tst = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+  terminal: false
 });
 
-tst.question('qualquer coisa', (ei) => {
-	console.log(`foi digitado: ${ei}`);
+var n1;
+var n2;
+var n3;
+var n4;
+var n5;
+var n6;
 
-	tst.close();
-	});
+rl.on('line', function(answer) {
+	n1 = answer;
+	console.log(n1);
+});
